@@ -5,11 +5,9 @@
   flex-direction: column;
 }
 header {
-  margin: 44px 0 50px 0;
-  /* height: 200px; */
-  /* background-color: rgb(71, 19, 19); */
+  height: 250px;
+  background-color: rgb(71, 19, 19);
   text-align: center;
-  
 }
 nav {
   list-style: none;
@@ -18,10 +16,10 @@ nav {
 }
 .nav-brand {
   display: block;
-  font-size: 60px;
+  font-size: 70px;
   line-height: 1;
-  width: 960px;
-  margin: 44px 0 50px;
+  width: 96%;
+  margin: 75px 0 40px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -37,12 +35,18 @@ a.home-active {
 li a:hover {
   color: #0ba39c;
 }
-ul.menu {
-  padding: 0 150px;
-}
 .menu {
-  display: flex;
-  justify-content: space-around;
+  margin-left: uto;
+  margin-right: auto;
+}
+
+li {
+  display: inline;
+}
+
+.menu li{
+  margin-right: 2%;
+  margin-left: 2%;
 }
 
 .hamburger {
@@ -57,7 +61,7 @@ ul.menu {
 }
 
 main {
-  /* height: 100%; */
+  height: ;
   flex: 1;
   background-color: wheat;
 }
@@ -67,15 +71,75 @@ main section {
   /* height: 1800px; */
 }
 footer {
-  height: 180px;
-  background-color: plum;
+  height: 120px;
+  background-color: orange;
+  margin: 0;
+  padding: 36px 42px;
 }
+p {
+  font-family: 'Kanit', sans-serif;
+  float: left;
+  line-height: 44px;
+  margin: 0 0 0 20px;
+}
+ul.social li {
+  float: right;
+  margin: 0 25px 0 0;
+  text-indent: -99999px;
+  overflow: hidden;
+}
+footer ul li #twitter {
+  background-position: 0 0;
+}
+#twitter {
+  background: url(/img/icons.jpg) no-repeat 0 0;
+  display: block;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  width: 45px;
+}
+footer ul li #facebook {
+  background-position: 0 -44px;
+}
+#facebook {
+  background: url(/img/icons.jpg) no-repeat 0 0;
+  display: block;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  width: 45px;
+}
+footer ul li #googleplus {
+  background-position: 0 -88px;
+}
+#googleplus {
+  background: url(/img/icons.jpg) no-repeat 0 0;
+  display: block;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  width: 45px;
+}
+footer ul li #pinterest {
+  background-position: 0 -132px;
+}
+#pinterest {
+  background: url(/img/icons.jpg) no-repeat 0 0;
+  display: block;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  width: 45px;
+}
+
+/* ********media query********** */
 @media (max-width: 576px) {
-  header a.nav-brand {
+  /* header a.nav-brand {
     display: block;
     margin: 0;
     padding: 0;
-  }
+  } */
   header ul li {
     display: none;
   }
