@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
 }
+/* *********Navigation Bar************* */
 header {
   height: 250px;
   background-color: rgb(71, 19, 19);
@@ -16,7 +17,7 @@ nav {
 }
 .nav-brand {
   display: block;
-  font-size: 70px;
+  font-size: 60px;
   line-height: 1;
   width: 96%;
   margin: 75px 0 40px;
@@ -28,6 +29,7 @@ a {
   text-decoration: none;
   transition: 0.7s ease;
   color: black;
+  text-transform: uppercase;
 }
 a.home-active {
   color: #0ba39c;
@@ -36,7 +38,7 @@ li a:hover {
   color: #0ba39c;
 }
 .menu {
-  margin-left: uto;
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -50,43 +52,110 @@ li {
 }
 
 .hamburger {
-  /* display: none; */
   cursor: pointer;
   margin: 0 auto;
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   border-radius: 3px;
   background-color: #0ba39c;
   display: none;
 }
-
-main {
-  height: ;
+/* *********Page content********** */
+#body {
+  font-family: 'Kanit', sans-serif;
+ min-height: 100%;
   flex: 1;
   background-color: wheat;
 }
-main section {
-  /* height: 50px; */
-  background-color: brown;
-  /* height: 1800px; */
+#body div {
+  display: block;
 }
+#body .featured {
+  position: relative;
+  width: 100%;
+}
+div .background-img {
+  background-image: url(../img/hairsalon-01.jpg);
+  background-color: antiquewhite;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* .featured {
+  position: absolute;
+} */
+.featured h2 {
+  background: rgb(250, 119, 119);
+    color: #000;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 18px;
+    padding: 23px 27px 20px;
+    text-transform: uppercase;
+}
+.featured span {
+  background: #252525;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin: 7px 0;
+    padding: 12px 27px;
+}
+#body div.featured {
+  left: 50%;
+    margin-left: -480px;
+    margin-top: -171px;
+    padding: 0 0 0 470px;
+    position: absolute;
+    top: 50%;
+    text-align: left;
+    /* width: 500px; */
+}
+ul.body {
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 24px 0 0;
+  width: 960px;
+  height: 230px;
+}
+ul.body li img {
+  width: 400px;
+  height: auto;
+  /* object-fit: cover; */
+  vertical-align: middle;
+}
+
+
+/*  ******* Footer **********  */
 footer {
   height: 120px;
   background-color: orange;
   margin: 0;
   padding: 36px 42px;
 }
-p {
+footer > div {
+  width: 960px;
+  margin: 0 auto;
+}
+footer p {
   font-family: 'Kanit', sans-serif;
   float: left;
   line-height: 44px;
-  margin: 0 0 0 20px;
+  margin: 0 200px 0 100px;  
+}
+ul.social {
+  margin-right: 100px;
 }
 ul.social li {
   float: right;
-  margin: 0 25px 0 0;
+  margin: 0 18px 0 0;
   text-indent: -99999px;
   overflow: hidden;
+  
 }
 footer ul li #twitter {
   background-position: 0 0;
@@ -135,16 +204,63 @@ footer ul li #pinterest {
 
 /* ********media query********** */
 @media (max-width: 576px) {
-  /* header a.nav-brand {
-    display: block;
-    margin: 0;
-    padding: 0;
-  } */
-  header ul li {
-    display: none;
+  /* ********** Navbar ********* */
+  header {
+    position: relative;
   }
-  
   .hamburger {
     display: block;
+    position: absolute;
+    margin-top: -230px;
+    margin-left: 240px;
+    align-items: center;
   }
+  header ul li a, a.home-active {
+    display: block;
+    /* position: relative; */
+    color: white;
+    border-top: 1px solid white;
+    background-color: #0ba39c;
+    height: 49px;
+    line-height: 49px;
+    font-weight: normal;
+    font-size: 18px;
+    visibility: hidden;
+  }
+  li a:hover {
+    background-color: black;
+  } 
+ 
+  .hamburger:hover header ul li a {
+    
+  }
+  /* *****Body page******** */
+  div.background-img {
+    position: relative;
+  }
+  .featured h2, .featured span {
+    position: absolute;
+    width: 96%;
+    text-align: left;
+    padding: 0;
+    
+  }
+  /* ********footer media********** */
+  footer {
+    padding: 0;
+  }
+  footer p {
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 50px;
+    
+  }
+  ul.social {
+    /* float: none; */
+    /* margin: 0 auto; */
+    margin-left: 160px;
+    margin-right: auto;
+    width: 256px;
+  }
+  
 }
