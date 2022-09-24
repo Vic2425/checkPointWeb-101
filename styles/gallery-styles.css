@@ -66,32 +66,44 @@
   min-height: 100%;
   flex: 1;
   background-color: wheat;
+  text-align: center;
 }
 #body div {
-  display: block;
+  /* display: block; */
 }
-#body .featured {
-  position: relative;
+div.h1-box {
+  display: inline;
+}
+h1 {
+  display: inline-block;
+  padding: 5px 25px 5px;
+  background-color: #0ba39c;
+  text-transform: uppercase;
+  margin: 10px;
+  font-size: 35px;
+}
+div.gallery {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 960px; */
+  max-width: 1200px;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 15px;
+  padding-bottom: 50px;
+  
 }
-.gallery {
-  width: 1000px;
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 80px;
-  overflow: auto;
-}
-.gal-pic {
+img {
+  width: 300px;
+  height: 300px;
+  /* padding: 5px; */
   margin: 10px;
   border: 3px solid rgb(134, 122, 103);
-  float: left;
-  width: 300px;
-}
-.gal-pic img {
-  width: 100%;
-  height: auto;
   box-shadow: 0px 8px 8px -2px #111;
-} 
+}
 /*  ******* Footer ********** */
 footer {
   height: 120px;
@@ -166,6 +178,14 @@ footer ul li #pinterest {
 
 /* ********media query********** */
 @media (max-width: 576px) {
+  #body {
+    width: 100%;
+  }
+  #body {
+    margin: 0;
+    padding: 0 0 30px;
+    text-align: center;
+  }
   /* ********** Navbar ********* */
   header {
     position: relative;
@@ -197,7 +217,16 @@ footer ul li #pinterest {
     
   }
   /* *****Body page******** */
- 
+.h1-box {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+ h1 {
+  font-size: 20px;
+  padding: 3%;
+  width: 63%;
+ }
   /* ********footer media********** */
   footer {
     padding: 0;
