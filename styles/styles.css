@@ -1,6 +1,6 @@
 .main-container {
   border: 2px solid green;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +63,7 @@ li {
 /* *********Page content********** */
 #body {
   font-family: 'Kanit', sans-serif;
- min-height: 100%;
+  min-height: 100%;
   flex: 1;
   background-color: wheat;
 }
@@ -83,9 +83,6 @@ div .background-img {
   background-size: cover;
   position: relative;
 }
-/* .featured {
-  position: absolute;
-} */
 .featured h2 {
   background: rgb(250, 119, 119);
     color: #000;
@@ -106,29 +103,33 @@ div .background-img {
 }
 #body div.featured {
   left: 50%;
-    margin-left: -480px;
-    margin-top: -171px;
-    padding: 0 0 0 470px;
-    position: absolute;
-    top: 50%;
-    text-align: left;
-    /* width: 500px; */
+  margin-left: -480px;
+  margin-top: -171px;
+  padding: 0 0 0 470px;
+  position: absolute;
+  top: 50%;
+  text-align: left;
+  /* width: 500px; */
 }
-ul.body {
-  display: flex;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 24px 0 0;
-  width: 960px;
-  height: 230px;
+.home-gallery {
+  width: 1000px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 80px;
+  /* background: #0ba39c; */
+  overflow: auto;
 }
-ul.body li img {
-  width: 400px;
+.pic {
+  margin: 10px;
+  border: 3px solid rgb(134, 122, 103);
+  float: left;
+  width: 300px;
+}
+.pic img {
+  width: 100%;
   height: auto;
-  /* object-fit: cover; */
-  vertical-align: middle;
+  box-shadow: 0px 8px 8px -2px #111;
 }
-
 
 /*  ******* Footer **********  */
 footer {
